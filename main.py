@@ -67,8 +67,8 @@ if __name__ == "__main__":
     read_lines()
 
     print("ADD EXPENSE")
-    new_expense = '\n"walmart",18.69,12/06/2020,["shopping"]'
-    new_expense_2 = '\n"walmart",7.84,12/07/2020,["shopping"]'
+    new_expense = '\n"walmart",18.69,"12/06/2020","shopping"'
+    new_expense_2 = '\n"walmart",7.84,"12/07/2020","shopping"'
     print(add_expense(new_expense))
     print(add_expense(new_expense_2))
 
@@ -79,7 +79,7 @@ if __name__ == "__main__":
     print(get_expense(10))
 
     print("EDIT EXPENSE")
-    string = '"walmart",7.64,12/06/2020,["shopping"]'
+    string = '"walmart",7.64,"12/06/2020","shopping"'
     edit_expense(10, string)
 
     print("DELETE EXPENSE")
