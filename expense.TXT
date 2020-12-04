@@ -1,10 +1,10 @@
 title,amount,created_at,tags
-"groceries",129,11/29/2020,'["food","groceries","meal"]'
-"rent",750,12/01/2020,'["rent","housing"]'
-"phone",25.78,12/01/2020,'["utilities","bills","phone"]'
-"water",30.82,12/02/2020,'["utilities","bills"]'
-"electricity",46.14,12/02/2020,'["utilities","bills"]'
-"planet fitness",11.01,12/03/2020,'["bills","gym", "health", "subscription"]'
-"netflix",7.08,12/04/2020,'["bills","entertainment, "subscription"]'
-"cvs",8,12/05/2020,'["medicine","health]'
-"target",42.89,12/05/2020,'["shopping"]'
+"groceries",129,"11/29/2020","food,groceries,meal"
+"rent",750,"12/01/2020","rent,housing"
+"phone",25.78,"12/01/2020","utilities,bills,phone"
+"water",30.82,"12/02/2020","utilities,bills"
+"electricity",46.14,"12/02/2020","utilities,bills"
+"planet fitness",11.01,"12/03/2020","bills,gym,health,subscription"
+"netflix",7.08,"12/04/2020","bills,entertainment,subscription"
+"cvs",8,"12/05/2020","medicine,health"
+"target",42.89,"12/05/2020","shopping"
