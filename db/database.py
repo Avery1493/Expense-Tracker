@@ -65,13 +65,10 @@ def body(file_path):
     # Save csv
     read_file.to_csv(
         r"C:\Users\avery\Lambda\Expense-Tracker\exp.csv", index=False)
-
     # Load csv
     expenses = pd.read_csv(r"C:\Users\avery\Lambda\Expense-Tracker\exp.csv")
-
     # Connect to database
     conn = create_connection(database)
-
     # Copy csv to database
     if conn is not None:
         expenses.to_sql('expenses', conn, if_exists='append', index=False)
