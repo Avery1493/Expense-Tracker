@@ -5,9 +5,11 @@ def read_lines():
     Lines = file_1.readlines()
     for line in Lines:
         print(line)
-
+        print(type(line))
 
 # Add Expense (append)
+
+
 def add_expense(new_expense):
     file_1 = open("expense.txt", "a")
     file_1.write(new_expense)

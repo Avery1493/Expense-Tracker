@@ -1,5 +1,9 @@
 import sqlite3
 from sqlite3 import Error
+import pandas as pd
+
+# Database
+database = r"C:\Users\avery\Lambda\Expense-Tracker\db\exp.db"
 
 
 def create_connection(db_file):
@@ -31,8 +35,6 @@ def create_expense(conn, expense):
 
 
 def main():
-    database = r"C:\Users\avery\Lambda\Expense-Tracker\db\exp.db"
-
     sql_create_expense_table = """ CREATE TABLE IF NOT EXISTS expenses (
         id integer PRIMARY KEY,
         title text NOT NULL,
@@ -49,9 +51,34 @@ def main():
         print("Error! Cannot create the database connection")
 
     with conn:
-        expense = ("walmart", 18.69, "12/06/2020", '["shopping"]')
+        expense = ("geico", 90.65, "11/24/2020",
+                   "vehicle, insurance, bills")
         create_expense(conn, expense)
+
+    conn.close
+
+
+def body(file_path):
+    # Convert txt to csv
+    read_file = pd.read_csv(file_path)
+
+    # Save csv
+    read_file.to_csv(
+        r"C:\Users\avery\Lambda\Expense-Tracker\exp.csv", index=False)
+
+    # Load csv
+    expenses = pd.read_csv(r"C:\Users\avery\Lambda\Expense-Tracker\exp.csv")
+
+    # Connect to database
+    conn = create_connection(database)
+
+    # Copy csv to database
+    if conn is not None:
+        expenses.to_sql('expenses', conn, if_exists='append', index=False)
+    else:
+        print("Error! Cannot create the database connection")
 
 
 if __name__ == "__main__":
     main()
+    body(r"C:\Users\avery\Lambda\Expense-Tracker\expense.TXT")
