@@ -6,8 +6,14 @@ Each expense should have following attributes:
 * created_at (date)
 * tags (list of strings)
 
-Store expenses in TXT file.
+expense.TXT : Store expenses  
+main.py : Reads expenses from file; add expense; list expenses;
+gets expense; edit and expense; and can delete an expense. Changes 
+will overwrite existing file  
+script.py : Copies all expenses from txt file to a data base  
+database.py : Creates database connection; create expenses table, 
+add new expense to table; convert txt file to csv and store expenses 
+to the database
 
-Cover: Add expense, list expenses, get expense, edit expense, delete expense  
 
 Avery Quinn
