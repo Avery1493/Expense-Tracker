@@ -13,6 +13,21 @@ class Expense():
         return "Title: {self.title}, Amount:  {self.amount}, Created_On:  {self.created_on}, Tags: {self.tags}".format(self=self)
 
 
+class ExpenseRepository():
+
+    def save():
+        return None
+
+    def get_by_id():
+        return None
+
+    def list():
+        return None
+
+    def delete():
+        return None
+
+
 if __name__ == "__main__":
     exp = Expense("target", 45, "12/06/20", ["shopping", "bills"])
     print(exp)
